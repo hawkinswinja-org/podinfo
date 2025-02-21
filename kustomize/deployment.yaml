@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: ghcr.io/hawkinswinja-org/podinfo:1.0.0 # {"$imagepolicy": "flux-system:podinfo"}
+        image: ghcr.io/hawkinswinja-org/podinfo:1.0.1 # {"$imagepolicy": "flux-system:podinfo"}
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -73,8 +73,8 @@ spec:
             cpu: 100m
             memory: 64Mi
         volumeMounts:
-          - name: data
-            mountPath: /data
-      volumes:
         - name: data
-          emptyDir: {}
+          mountPath: /data
+      volumes:
+      - name: data
+        emptyDir: {}
