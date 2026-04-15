@@ -6,6 +6,7 @@ spec:
   parentRefs:
     - name: gateway-prd
       kind: Gateway
+      namespace: traefik
   hostnames:
     - podinfo.api.sarabi.live
   rules:
